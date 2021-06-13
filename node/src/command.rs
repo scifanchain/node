@@ -23,7 +23,7 @@ use node_template_runtime::Block;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Substrate Node".into()
+		"Scifanchain".into()
 	}
 
 	fn impl_version() -> String {
