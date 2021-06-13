@@ -47,6 +47,7 @@ sp-version = {default-features = false, version = '3.0.0', git = 'https://github
 
 # local dependencies
 pallet-template = {default-features = false, version = '3.0.0', path = '../pallets/template'}
+pallet-poe = {default-features = false, version = '3.0.0', path = '../pallets/poe'}
 
 [features]
 default = ['std']
@@ -73,6 +74,7 @@ std = [
 	'pallet-randomness-collective-flip/std',
 	'pallet-sudo/std',
 	'pallet-template/std',
+	'pallet-poe/std',
 	'pallet-timestamp/std',
 	'pallet-transaction-payment-rpc-runtime-api/std',
 	'pallet-transaction-payment/std',
