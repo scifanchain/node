@@ -9,10 +9,10 @@
 ## 🎯 核心定位
 
 ```
-Gestell Node = 24/7 在线的数据库 + P2P 同步
-             = 一个没有 UI 的、永远在线的 Gestell 客户端
-             ≠ HTTP API 服务器
-             ≠ 业务逻辑处理器
+Gestell Node 提供 24/7 在线的数据库 P2P 同步
+
+多个Gestell Node节点构成节点池，供客户端随机连接。
+
 ```
 
 ### 工作原理
