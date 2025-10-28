@@ -1,0 +1,40 @@
+{
+  "name": "gestell-node",
+  "version": "1.0.0",
+  "description": "Gestell 24/7 P2P Sync Node - 永不下线的去中心化数据节点",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "gestell",
+    "p2p",
+    "sync",
+    "crdt",
+    "crsqlite",
+    "node"
+  ],
+  "author": "Scifan Chain",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "@vlcn.io/crsqlite": "^0.16.3",
+    "drizzle-orm": "^0.44.6",
+    "dotenv": "^17.2.3",
+    "peerjs": "^1.5.5",
+    "ws": "^8.14.2",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.9.3",
+    "ts-node": "^10.9.2",
+    "rimraf": "^6.0.1"
+  }
+}

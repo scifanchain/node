@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  gestell-node:
+    build: .
+    container_name: gestell-node
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - DATABASE_PATH=/app/data/gestell-node.db
+      - SIGNALING_URL=ws://106.53.71.197:2026/crsqlite/signal
+      - RELAY_URL=ws://106.53.71.197:2026/crsqlite/relay
+      - SERVER_URL=http://106.53.71.197:2026
+      - WORKSPACE_ID=default-workspace
+      - DEVICE_NAME=gestell-node-docker
+      - DEVICE_TYPE=server
+    volumes:
+      - ./data:/app/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "node", "-e", "process.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

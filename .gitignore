@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+.env
+data/*.db
+data/*.db-shm
+data/*.db-wal
+data/device-config.json
+.DS_Store
